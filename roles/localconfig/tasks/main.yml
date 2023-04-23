@@ -1,0 +1,34 @@
+---
+- name: Get current account's username.
+  shell: whoami
+  register: homebrew_whoami
+  changed_when: false
+  check_mode: no
+
+- name: Install Pip Libraries
+  pip:
+    name: "{{ pip_items }}"
+    executable: pip3
+    extra_args: "--ignore-installed"
+
+- name: Install Ruby Gems
+  gem:
+    name: "{{ item }}"
+  with_items: "{{ gem_items }}"
+
+- name: Install Node Packages
+  npm:
+    name: "{{ item }}"
+    global: yes
+  with_items: "{{ npm_items }}"
+
+- name: Remove crap from Dock
+  shell: dockutil --remove '{{ item }}'
+  ignore_errors: true
+  with_items: "{{ dockitems_to_remove }}"
+
+- name: Update homebrew
+  shell: brew upgrade
+
+- name: Update Homebrew Cask
+  shell: brew cask upgrade
