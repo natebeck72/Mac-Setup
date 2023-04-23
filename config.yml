@@ -1,10 +1,46 @@
----
-- hosts: all
-  connection: local
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
 
-  vars_files:
-    - config.yml
+homebrew_installed_packages:
+  - python3
+  - dockutil
+  - gpg
 
-  roles:
-    - geerlingguy.homebrew
-    - geerlingguy.mas
+homebrew_cask_apps:
+  - alfred
+  - iterm2
+  - 1password
+  - elgato-camera-hub
+  - elgato-control-center
+  - elgato-stream-deck
+  - istat-menus
+  - visual-studio-code
+
+mas_installed_apps:
+  - { id: 441258766, name: "Magnet" }
+
+pip_items:
+  - virtualenvwrapper
+
+gem_items: []
+
+npm_items: []
+
+dockitems_to_remove:
+  - Siri
+  - Mail 
+  - Contacts
+  - Notes
+  - Reminders
+  - Maps 
+  - Photos
+  - Facetime
+  - iBooks
+  - News
+  - Podcasts
+  - TV 
+
+
+
+
