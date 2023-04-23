@@ -4,7 +4,6 @@ homebrew_taps:
 
 homebrew_installed_packages:
   - python3
-  - dockutil
   - gpg
 
 homebrew_cask_apps:
@@ -16,6 +15,7 @@ homebrew_cask_apps:
   - elgato-stream-deck
   - istat-menus
   - visual-studio-code
+  - hpedrorodrigues/tools/dockutil
 
 mas_installed_apps:
   - { id: 441258766, name: "Magnet" }
