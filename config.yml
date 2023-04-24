@@ -16,9 +16,14 @@ homebrew_cask_apps:
   - istat-menus
   - visual-studio-code
   - hpedrorodrigues/tools/dockutil
+  - sublime-text
+
 
 mas_installed_apps:
   - { id: 441258766, name: "Magnet" }
+  - { id: 497799835, name: "Xcode" }
+  - { id: 803453959, name: "Slack for Desktop" }
+
 
 pip_items:
   - virtualenvwrapper
@@ -28,19 +33,16 @@ gem_items: []
 npm_items: []
 
 dockitems_to_remove:
-  - Siri
   - Mail 
   - Contacts
   - Notes
   - Reminders
   - Maps 
   - Photos
-  - Facetime
+  - Safari
+  - Freeform
+  - FaceTime
   - iBooks
   - News
   - Podcasts
   - TV 
-
-
-
-
