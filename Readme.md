@@ -17,22 +17,13 @@ The easiest way to install is to follow the following steps:
 
 Commands:
 
- xcode-select --install
- 
- sudo pip3 install --upgrade pip
- 
- sudo pip install ansible
- 
- mkdir mac-ansible 
- 
- cd mac-ansible 
- 
- git clone https://github.com/natebeck72/Mac-Setup
- 
- cd Mac-Setup
- 
- ansible-galaxy install -r requirements.yml
- 
- osascript -e 'tell application "Finder"' -e 'set _b to bounds of window of desktop' -e 'end tell'
- 
- ansible-playbook playbook.yml -i inventory -K
+    xcode-select --install
+    sudo pip3 install --upgrade pip
+    sudo pip install ansible
+    mkdir mac-ansible 
+    cd mac-ansible 
+    git clone https://github.com/natebeck72/Mac-Setup
+    cd Mac-Setup
+    ansible-galaxy install -r requirements.yml
+    osascript -e 'tell application "Finder"' -e 'set _b to bounds of window of desktop' -e 'end tell'
+    ansible-playbook playbook.yml -i inventory -K
