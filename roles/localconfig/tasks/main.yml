@@ -5,6 +5,19 @@
   changed_when: false
   check_mode: no
 
+# Clone Dotfiles
+- name: Clone the dotfiles directory
+  git: 
+    repo: "{{ dotfiles_repo }}"
+    version: "{{ dotfiles_branch }}"
+    dest: "/Users/{{ homebrew_whoami.stdout }}/mac-ansible/dotfiles"
+    update: yes
+    accept_hostkey: yes
+    depth: 1
+
+- name: Run the dotfiles bootstrap.sh
+  command: "/Users/{{ homebrew_whoami.stdout }}/mac-ansible/dotfiles/bootstrap.sh -f"
+
 - name: Install Pip Libraries
   pip:
     name: "{{ pip_items }}"
