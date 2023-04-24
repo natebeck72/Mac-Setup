@@ -13,7 +13,7 @@
     dest: "/Users/{{ homebrew_whoami.stdout }}/mac-ansible/dotfiles"
     update: yes
     accept_hostkey: yes
-    depth: 1
+
 
 - name: Run the dotfiles bootstrap.sh
   command: "/Users/{{ homebrew_whoami.stdout }}/mac-ansible/dotfiles/bootstrap.sh -f"
