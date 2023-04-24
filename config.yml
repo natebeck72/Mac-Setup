@@ -19,12 +19,13 @@ homebrew_cask_apps:
   - sublime-text
   - rectangle
   - notion
-  
+  - krisp
+
 
 
 mas_installed_apps:
   - { id: 497799835, name: "Xcode" }
-  - { id: 803453959, name: "Slack for Desktop" }
+
 
 
 pip_items:
