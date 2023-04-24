@@ -5,6 +5,9 @@
   changed_when: false
   check_mode: no
 
+- name: Install Oh My ZSH
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Clone Dotfiles
 - name: Clone the dotfiles directory
   git: 
@@ -12,7 +15,6 @@
     dest: "/Users/{{ homebrew_whoami.stdout }}/mac-ansible/dotfiles"
     update: yes
     accept_hostkey: yes
-
 
 - name: Run the dotfiles bootstrap.sh
   command: "/Users/{{ homebrew_whoami.stdout }}/mac-ansible/dotfiles/bootstrap.sh -f"
